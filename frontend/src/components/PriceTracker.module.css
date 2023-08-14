@@ -1,0 +1,29 @@
+.ticker {
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-300);
+  color: hsl(var(--text2));
+  transition: color 0.1s ease, text-shadow 0.1s ease;
+}
+
+.icon {
+  height: 25px;
+  margin-right: 7px;
+}
+
+.value {
+  color: #fff;
+  margin-left: 5px;
+  transition: color 0.1s ease, text-shadow 0.1s ease;
+}
+
+.ticker:hover,
+.ticker:hover .value {
+  color: hsl(var(--text2));
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.ticker:active .value {
+  color: #fff;
+  text-shadow: 0 0 8px hsl(var(--text3));
+}

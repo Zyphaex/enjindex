@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/manrope.regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* fonts */
+  --fs-100: 14px;
+  --fs-200: 16px;
+  --fs-300: 18px;
+  --fs-400: 32px;
+  --fs-500: 44px;
+  --lh-1: 1;
+  --lh-1-2: 1.2;
+  --lh-1-4: 1.4;
+
+  /* colours */
+  --bkg: 0, 0%, 12%;
+  --text: 0, 0%, 100%;
+  --text2: 248, 56%, 65%;
+  --text3: #e6e6e6;
+
+  /* utils */
+  --space-sm: 5px;
+  --space-md: 10px;
+  --space-lg: 20px;
+  --content: 50ch;
+  --round-sm: 4px;
+  --round-md: 10px;
+  --round-lg: 20px;
+  --round-full: 100vmax;
+  --box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  display: block;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  font-size: var(--fs-200);
+  line-height: var(--lh-1-4);
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background-color: hsl(var(--bkg));
+  color: hsl(var(--text));
+  background: linear-gradient(to bottom right, #000000, #333333), #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: var(--lh-1-2);
+  font-size: var(--fs-500);
+  color: hsl(var(--text2));
+}
+
+a {
+  text-decoration: none;
+  color: hsl(var(--text3));
+  transition: color 0.1s ease, text-shadow 0.1s ease;
+}
+
+a:hover {
+  color: hsl(var(--text2));
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+a:active {
+  color: hsl(var(--text2));
+  text-shadow: 0 0 8px hsl(var(--text3));
+}
+
+.cardContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: var(--fs-400);
+  }
+
+  .cardContainer {
+    gap: 20px;
+  }
+}

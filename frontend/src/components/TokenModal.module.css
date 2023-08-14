@@ -1,0 +1,146 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modalContent {
+  background: radial-gradient(circle at center, #48555a 0%, #383d40 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  overflow: hidden;
+  box-shadow: 0 0 5px 2px hsl(var(--text2));
+}
+
+.modalContent h3,
+.modalContent h4 {
+  transition: color 0.1s ease;
+}
+
+.modalContent h3 {
+  color: white;
+  font-size: 24px;
+  min-height: 24px;
+}
+
+.modalContent h4 {
+  color: #919292;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.modalContent p {
+  color: white;
+  font-size: 16px;
+  background-image: radial-gradient(
+    circle at center,
+    #7569b5 0%,
+    #8376d8 50%,
+    #6258a4 100%
+  );
+  border-radius: 50px;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  width: 100%;
+  min-height: 22px;
+}
+
+.modalContent img {
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.modalContent .nftioContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.modalContent .tokenIdImportContainer {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.modalContent .tokenIdImportContainer span {
+  background-color: #616161;
+  padding: 5px 10px;
+  border-radius: 5px;
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modalContent .tokenIdImportContainer button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-image: radial-gradient(
+    circle at center,
+    #7569b5 0%,
+    #8376d8 50%,
+    #6258a4 100%
+  );
+  cursor: pointer;
+}
+
+.modalContent .viewOnLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.modalContent .nftioLogo {
+  width: 50px;
+  height: auto;
+  margin-left: 5px;
+  border-radius: 0;
+}
+
+.modalContent button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  float: right;
+  transition: color 0.1s ease;
+}
+
+.modalContent button:hover,
+.modalContent .viewOnLink:hover {
+  color: hsl(var(--text2));
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .modalContent {
+    width: 300px;
+  }
+
+  .modalContent h3 {
+    font-size: 16px;
+  }
+
+  .modalContent h4 {
+    font-size: 14px;
+  }
+
+  .modalContent p {
+    font-size: 14px;
+  }
+}
