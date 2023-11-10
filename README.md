@@ -14,17 +14,19 @@ Make sure you have Node and NPM installed::
 
 ```bash
 node -v
-# v18.16.1
+# v20.6.1
 ```
 ```bash
 npm -v
-# 9.5.1
+# 10.1.0
 ```
 
 ## Installation
 
 Run the commands:
-
+```bash
+cd frontend
+```
 ```bash
 npm install
 ```
