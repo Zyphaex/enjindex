@@ -1,4 +1,4 @@
-# Final Year Project (FYP) 2023/24 @ Nottingham Trent University
+# Final Year Project (FYP) 2024 @ Nottingham Trent University
 
 <div align="center">
     <img src="frontend/src/assets/images/ntu-logo.webp" alt="Nottingham Trent University Logo" width="100">
@@ -6,7 +6,7 @@
 
 ---
 
-Final Year Project (FYP) for the Computer Science academic year 2023/24 at [Nottingham Trent University](https://ntu.ac.uk).
+Final Year Project (FYP) for the Computer Science academic year 2024 at [Nottingham Trent University](https://ntu.ac.uk).
 
 ## Requirements
 
@@ -43,7 +43,7 @@ Please review our [security policy](https://github.com/Zyphaex/fyp2024/security/
 - [Samuel Hillier](https://github.com/Zyphaex)
 - [All Contributors](https://github.com/Zyphaex/fyp2024/contributors)
 
-*External contributions will only be accepted post-submission.*
+*External contributions will only be reviewed post-university submission.*
 
 ## License
 
