@@ -6,7 +6,7 @@
 
 ---
 
-Final Year Project (FYP) for the Computer Science academic year 2023/24 at [Nottingham Trent University](https://www.ntu.ac.uk/course/computer-science).
+Final Year Project (FYP) for the Computer Science academic year 2023/24 at [Nottingham Trent University](https://ntu.ac.uk).
 
 ## Requirements
 
@@ -36,17 +36,17 @@ npm run dev
 
 ## Security Vulnerabilities
 
-Please review our [security policy](https://github.com/Zyphaex/fyp23-24/security/policy) on how to report security vulnerabilities.
+Please review our [security policy](https://github.com/Zyphaex/fyp2024/security/policy) on how to report security vulnerabilities.
 
 ## Credits
 
 - [Samuel Hillier](https://github.com/Zyphaex)
-- [All Contributors](https://github.com/Zyphaex/fyp23-24/contributors)
+- [All Contributors](https://github.com/Zyphaex/fyp2024/contributors)
 
 *External contributions will only be accepted post-submission.*
 
 ## License
 
-Please see [License File](https://github.com/Zyphaex/fyp23-24/blob/main/LICENSE) for more information.
+Please see [License File](https://github.com/Zyphaex/fyp2024/blob/main/LICENSE) for more information.
 
 © 2023 Samuel Hillier. All Rights Reserved.

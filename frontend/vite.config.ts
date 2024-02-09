@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
   }
 
   if (command !== 'serve') {
-    config.base = '/fyp23-24/'
+    config.base = '/fyp2024/'
   }
 
   return config
