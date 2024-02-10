@@ -49,4 +49,4 @@ Please review our [security policy](https://github.com/Zyphaex/fyp2024/security/
 
 Please see [License File](https://github.com/Zyphaex/fyp2024/blob/main/LICENSE) for more information.
 
-© 2023 Samuel Hillier. All Rights Reserved.
+© 2024 Samuel Hillier. All Rights Reserved.
