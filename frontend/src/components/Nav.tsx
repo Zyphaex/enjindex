@@ -7,9 +7,9 @@ const navLinks = [
     { name: 'Memberships', href: '#memberships' }
   ];
 
-const Nav = ({ links = navLinks }) => {
+  const Nav = ({ links = navLinks }) => {
     return (
-      <nav>
+      <nav className={styles.nav}>
         <ul className={styles.navLinks}>
           {links.map((link, index) => (
             <li key={index}>
@@ -17,8 +17,11 @@ const Nav = ({ links = navLinks }) => {
             </li>
           ))}
         </ul>
+        <div className={styles.searchContainer}>
+          <input type="text" className={styles.searchInput} placeholder="Search" />
+        </div>
       </nav>
     );
-  }
+}
 
 export default Nav;
