@@ -1,7 +1,7 @@
 nav {
     margin: 20px 0;
     padding: 10px 30px;
-    background-color: #4B4B4B;
+    background-color: #383D40;
     border-radius: 50px;
     font-size: var(--fs-300);
     display: flex;
@@ -35,7 +35,7 @@ nav {
     padding: 12px 40px 12px 20px;
     border: 2px solid #494949;
     border-radius: 50px;
-    background-color: #707070;
+    background-color: #55585a;
     color: hsl(var(--text3));
     transition: 0.1s ease;
     font-size: var(--fs-200);
@@ -48,8 +48,12 @@ nav {
 
 .searchInput:focus {
     border-color: hsl(var(--text2));
-    background-color: rgb(143, 143, 143);
+    background-color: #5c5f63;
     outline: none;
+}
+
+.searchInput:focus::placeholder {
+    opacity: 0.25;
 }
 
 @media (max-width: 768px) {

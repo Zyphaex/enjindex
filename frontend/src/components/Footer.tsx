@@ -55,7 +55,7 @@ const Footer = () => {
     <footer>
       <section className={styles.footerContainer}>
         <a className={styles.footerLogo} href="https://github.com/Zyphaex/fyp2024" target="_blank">
-          <img src="src\assets\images\ntu-logo-big.webp" alt="Nottingham Trent University" />
+          <img src="src/assets/images/ntu-logo-big.webp" alt="Nottingham Trent University" />
         </a>
         {renderFooterLinks()}
       </section>
