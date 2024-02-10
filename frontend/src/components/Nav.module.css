@@ -12,18 +12,11 @@ nav {
 .navLinks {
     list-style: none;
     display: flex;
-    gap: 40px;
     margin: 0;
 }
 
 .navLinks a {
-    text-decoration: none;
-    color: hsl(var(--text3));
-    transition: color 0.1s ease;
-}
-
-.navLinks a:hover {
-    color: hsl(var(--text2));
+    padding: 20px;
 }
 
 .searchContainer {
@@ -37,23 +30,19 @@ nav {
     border-radius: 50px;
     background-color: #55585a;
     color: hsl(var(--text3));
-    transition: 0.1s ease;
+    transition: border-color 0.1s ease, background-color 0.1s ease, box-shadow 0.1s ease;
     font-size: var(--fs-200);
 }
 
-.searchInput::placeholder {
-    color: hsl(var(--text3));
-    opacity: 0.5;
+.searchInput:hover {
+    border-color: hsl(var(--text2));
 }
 
 .searchInput:focus {
     border-color: hsl(var(--text2));
     background-color: #5c5f63;
     outline: none;
-}
-
-.searchInput:focus::placeholder {
-    opacity: 0.25;
+    box-shadow: 0 0 8px hsl(var(--text2));
 }
 
 @media (max-width: 768px) {

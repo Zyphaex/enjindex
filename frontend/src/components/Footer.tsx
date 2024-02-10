@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXTwitter, faLinkedin, faGithub, faYoutube, faDiscord } from '@fortawesome/free-brands-svg-icons';
 import ntuLogo from '../assets/images/ntu-logo-big.webp';
+import ntuLogoHover from '../assets/images/ntu-logo-big-hover.webp';
 
 const Footer = () => {
   // Social Media Links
@@ -20,6 +22,8 @@ const Footer = () => {
     { name: 'Terms & Conditions', href: 'terms' },
     { name: 'Privacy Policy', href: 'privacy' },
   ];
+
+  const [isHovered, setIsHovered] = useState(false);
 
   const renderSocialMediaLinks = () => {
     return (
@@ -55,8 +59,14 @@ const Footer = () => {
   return (
     <footer>
       <section className={styles.footerContainer}>
-        <a className={styles.footerLogo} href="https://github.com/Zyphaex/fyp2024" target="_blank">
-          <img src={ntuLogo} alt="Nottingham Trent University" />
+        <a
+          className={styles.footerLogo}
+          href="https://github.com/Zyphaex/fyp2024"
+          target="_blank"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <img src={isHovered ? ntuLogoHover : ntuLogo} alt="Nottingham Trent University" />
         </a>
         {renderFooterLinks()}
       </section>
