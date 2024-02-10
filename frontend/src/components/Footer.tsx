@@ -1,6 +1,7 @@
 import styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXTwitter, faLinkedin, faGithub, faYoutube, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import ntuLogo from '../assets/images/ntu-logo-big.webp';
 
 const Footer = () => {
   // Social Media Links
@@ -55,7 +56,7 @@ const Footer = () => {
     <footer>
       <section className={styles.footerContainer}>
         <a className={styles.footerLogo} href="https://github.com/Zyphaex/fyp2024" target="_blank">
-          <img src="src/assets/images/ntu-logo-big.webp" alt="Nottingham Trent University" />
+          <img src={ntuLogo} alt="Nottingham Trent University" />
         </a>
         {renderFooterLinks()}
       </section>
