@@ -50,7 +50,16 @@ nav {
     border-color: hsl(var(--text2));
     background-color: #5c5f63;
     outline: none;
-    box-shadow: 0 0 8px hsl(var(--text2));
+    box-shadow: 0 0 1px hsl(var(--text2));
+}
+
+.searchInput::placeholder {
+    color: hsl(var(--text3));
+    opacity: 0.5;
+}
+
+.searchInput:focus::placeholder {
+    opacity: 0.25;
 }
 
 @media (max-width: 768px) {
@@ -74,7 +83,7 @@ nav {
 
     .searchContainer {
         width: 100%;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     .searchInput {
