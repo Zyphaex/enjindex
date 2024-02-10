@@ -19,6 +19,14 @@ nav {
     padding: 20px;
 }
 
+.navLinks li:first-child a {
+    padding-left: 0;
+}
+
+.navLinks li:last-child a {
+    padding-right: 0;
+}
+
 .searchContainer {
     display: flex;
     align-items: center;
@@ -61,6 +69,7 @@ nav {
 
     .navLinks a {
         font-size: var(--fs-200);
+        padding-left: 0;
     }
 
     .searchContainer {
