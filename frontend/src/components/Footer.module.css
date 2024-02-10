@@ -1,0 +1,36 @@
+footer {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.footerContainer:first-of-type {
+    margin-bottom: 12px;
+}
+
+.footerContainer ul {
+    display: flex;
+    list-style: none;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.footerLogo img {
+    display: flex;
+    max-height: 30px;
+}
+
+.footerSocial {
+    font-size: var(--fs-300);
+}
+
+.footerLegal {
+    color: #707070;
+}

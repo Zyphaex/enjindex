@@ -30,14 +30,15 @@
   --text3: #E6E6E6;
 
   /* utils */
-  /*--space-sm: 
-	--space-md:
-	--space-lg:
-	--round-sm:
-	--round-md:
-	--round-lg:
-	--round-full:
-  --box-shadow:*/
+	--space-sm: clamp(0.4rem, 1.5vw, .8rem);
+	--space-md: clamp(1rem, 2.5vw, 1.4rem);
+	--space-lg: 20px;
+	--content: 50ch;
+	--round-sm: 4px;
+	--round-md: 10px;
+	--round-lg: 20px;
+	--round-full: 100vmax;
+  --box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -68,4 +69,14 @@ h6 {
     line-height: var(--lh-1-2);
     font-size: var(--fs-500);
     color: hsl(var(--text2));
+}
+
+a {
+  text-decoration: none;
+  color: hsl(var(--text3));
+  transition: color 0.1s ease;
+}
+
+a:hover {
+  color: hsl(var(--text2));
 }

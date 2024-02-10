@@ -37,7 +37,7 @@ nav {
     border-radius: 50px;
     background-color: #707070;
     color: hsl(var(--text3));
-    transition: border-color 0.1s ease;
+    transition: 0.1s ease;
     font-size: var(--fs-200);
 }
 
@@ -47,7 +47,8 @@ nav {
 }
 
 .searchInput:focus {
-    border-color: #414141;
+    border-color: hsl(var(--text2));
+    background-color: rgb(143, 143, 143);
     outline: none;
 }
 
