@@ -18,7 +18,7 @@
   --fs-200: 16px;
   --fs-300: 18px;
   --fs-400: 22px;
-  --fs-500: 56px;
+  --fs-500: 44px;
   --lh-1: 1;
   --lh-1-2: 1.2;
   --lh-1-4: 1.4;
@@ -27,6 +27,7 @@
   --bkg: 0, 0%, 12%;
   --text: 0, 0%, 100%;
   --text2: 248, 56%, 65%;
+  --text3: #E6E6E6;
 
   /* utils */
   /*--space-sm: 
@@ -54,6 +55,7 @@ body {
   -webkit-text-size-adjust: 100%;
   background-color: hsl(var(--bkg));
   color: hsl(var(--text));
+  background: linear-gradient(to bottom right, #000000, #333333);
 }
 
 h1,

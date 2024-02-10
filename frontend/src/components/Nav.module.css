@@ -1,0 +1,23 @@
+nav {
+    margin: 20px 0;
+    padding: 12px 30px;
+    background-color: #4B4B4B;
+    border-radius: 50px;
+    font-size: var(--fs-300);
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: hsl(var(--text3));
+    transition: color 0.1s ease;
+}
+
+.navLinks a:hover {
+    color: hsl(var(--text2));
+}
