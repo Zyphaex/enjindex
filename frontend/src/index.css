@@ -56,7 +56,7 @@ body {
   -webkit-text-size-adjust: 100%;
   background-color: hsl(var(--bkg));
   color: hsl(var(--text));
-  background: linear-gradient(to bottom right, #000000, #333333);
+  background: linear-gradient(to bottom right, #000000, #333333), #333333;
 }
 
 h1,
