@@ -34,3 +34,12 @@ footer {
 .footerLegal {
     color: #707070;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
