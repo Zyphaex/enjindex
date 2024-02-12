@@ -40,7 +40,7 @@ const Nav = ({ links = navLinks }) => {
         ))}
       </ul>
       <div className={styles.searchContainer}>
-        <input type="text" className={styles.searchInput} placeholder="Search" />
+        <input type="search" className={styles.searchInput} placeholder="Search" />
       </div>
     </nav>
   );
