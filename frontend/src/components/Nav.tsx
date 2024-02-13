@@ -18,7 +18,7 @@ const Nav = ({ links = navLinks }) => {
 
   return (
     <nav>
-      <div className={styles.mobileTopRow}>
+      <div className={styles.mobileSearch}>
         <div className={styles.hamburger} onClick={toggleNav}>
           <span></span>
           <span></span>

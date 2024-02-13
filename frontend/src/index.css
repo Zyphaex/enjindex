@@ -31,8 +31,8 @@
   --text3: #E6E6E6;
 
   /* utils */
-	--space-sm: clamp(0.4rem, 1.5vw, .8rem);
-	--space-md: clamp(1rem, 2.5vw, 1.4rem);
+	--space-sm: 5px;
+	--space-md: 10px;
 	--space-lg: 20px;
 	--content: 50ch;
 	--round-sm: 4px;
