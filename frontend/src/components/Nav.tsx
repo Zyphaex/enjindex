@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FiSearch } from 'react-icons/fi';
 import styles from './Nav.module.css';
 
 const navLinks = [
@@ -25,6 +26,9 @@ const Nav = ({ links = navLinks }) => {
         </div>
         <div className={styles.searchContainer}>
           <input type="text" className={styles.searchInput} placeholder="Search" />
+          <button className={styles.searchButton}>
+            <FiSearch />
+        </button>
         </div>
       </div>
       <div className={styles.hamburger} onClick={toggleNav}>
@@ -40,7 +44,10 @@ const Nav = ({ links = navLinks }) => {
         ))}
       </ul>
       <div className={styles.searchContainer}>
-        <input type="search" className={styles.searchInput} placeholder="Search" />
+        <input type="text" className={styles.searchInput} placeholder="Search" />
+        <button className={styles.searchButton}>
+          <FiSearch />
+        </button>
       </div>
     </nav>
   );

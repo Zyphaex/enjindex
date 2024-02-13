@@ -1,6 +1,6 @@
 nav {
     margin: 20px 0;
-    padding: 10px 30px;
+    padding: 10px 20px;
     background-color: #383D40;
     border-radius: 50px;
     font-size: var(--fs-300);
@@ -39,7 +39,7 @@ nav {
     height: 25px;
     min-width: 25px;
     min-height: 25px;
-    margin-right: 10px;
+    margin: 0 5px;
 }
   
 .hamburger span {
@@ -95,6 +95,25 @@ nav {
     opacity: 0.3;
 }
 
+/* Search Button */
+.searchButton {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: -47px;
+    color: white;
+}
+
+.searchButton:hover {
+    color: hsl(var(--text2));
+}
+
+.searchButton svg {
+    height: 22px;
+    width: 22px;
+}
+
 .mobileTopRow {
     display: none;
 }
@@ -143,8 +162,12 @@ nav {
         display: flex;
     }
 
-    .searchContainer, .searchInput {
+    .searchContainer, .searchInput, .searchButton {
         width: 100%;
+    }
+
+    .searchContainer button {
+        width: auto;
     }
 }
 
