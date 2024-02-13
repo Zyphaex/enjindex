@@ -21,13 +21,7 @@ nav {
     padding: 20px;
 }
 
-.navLinks li:first-child a {
-    padding-left: 0;
-}
 
-.navLinks li:last-child a {
-    padding-right: 0;
-}
 
 /* Hamburger */
 .hamburger {
@@ -74,6 +68,7 @@ nav {
     color: hsl(var(--text3));
     transition: border-color 0.1s ease, background-color 0.1s ease, box-shadow 0.1s ease;
     font-size: var(--fs-200);
+    width: 100%;
 }
 
 .searchInput:hover {

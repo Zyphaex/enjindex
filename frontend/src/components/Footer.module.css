@@ -45,5 +45,10 @@ footer {
 
     .footerContainer ul {
         justify-content: center;
+        gap: var(--space-md);
+    }
+
+    footer {
+        font-size: var(--fs-100);
     }
 }
