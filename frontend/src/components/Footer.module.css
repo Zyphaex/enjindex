@@ -42,4 +42,8 @@ footer {
         align-items: center;
         gap: 10px;
     }
+
+    .footerContainer ul {
+        justify-content: center;
+    }
 }

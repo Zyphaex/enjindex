@@ -17,7 +17,7 @@
   /* fonts */
   --fs-200: 16px;
   --fs-300: 18px;
-  --fs-400: 22px;
+  --fs-400: 32px;
   --fs-500: 44px;
   --lh-1: 1;
   --lh-1-2: 1.2;
@@ -85,4 +85,16 @@ a:hover {
 a:active {
   color: hsl(var(--text2));
   text-shadow: 0 0 8px hsl(var(--text3));
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-size: var(--fs-400);
+  }
 }
