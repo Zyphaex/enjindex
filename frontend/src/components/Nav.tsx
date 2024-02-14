@@ -6,7 +6,8 @@ const navLinks = [
   { name: 'Avatars', href: '#avatars' },
   { name: 'Metaverse', href: '#metaverse' },
   { name: 'Art', href: '#art' },
-  { name: 'Memberships', href: '#memberships' }
+  { name: 'Memberships', href: '#memberships' },
+  { name: 'Historic', href: '#historic' },
 ];
 
 const Nav = ({ links = navLinks }) => {
