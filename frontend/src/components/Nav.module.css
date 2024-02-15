@@ -8,6 +8,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     gap: var(--space-lg);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Page Links */
