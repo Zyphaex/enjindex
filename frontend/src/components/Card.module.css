@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.card h3, .card p {
+.card h3, .card h4, .card p {
     flex-shrink: 0;
     white-space: nowrap;
     overflow: hidden;
@@ -23,11 +23,16 @@
 }
 
 .card h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: white;
     font-size: 18px;
     min-height: 24px;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: white;
 }
 
 .card p {
@@ -42,7 +47,6 @@
 }
 
 .card img {
-    margin-top: 5px;
     max-width: 100%;
     border-radius: 10px;
     object-fit: cover;
@@ -58,6 +62,10 @@
 
     .card h3 {
         font-size: 16px;
+    }
+
+    .card h4 {
+        font-size: 14px;
     }
     
     .card p {
