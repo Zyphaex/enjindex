@@ -9,6 +9,7 @@ const tokens = [
   { name: 'Degens', collection: 'Degens', type: 'Avatars', imageUrl: 'https://platform.production.enjinusercontent.com/enterprise/degens/assets/media/29.png', link: '#' },
 
   { name: 'Priceless Binance Hoodie', collection: 'Binance', type: 'Metaverse', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/67d254c8ee72edcb151789f7fc44dfa718c637fa5fbcebf5da444bd7e5bc4525.png', link: 'https://nft.io/asset/3363-149870456524749265407774008994990915585' },
+  { name: 'Exclusive Binance Hoodie', collection: 'Binance', type: 'Metaverse', imageUrl: 'https://cdn.enjinx.io/metadata/raw/37cc6eb9e2174243e125786b97aa1787f187639b/01ac96107b8e5a3477034161fbdefddb4fb28286.png', link: '#' },
   { name: 'Iconic Binance Hoodie', collection: 'Binance', type: 'Metaverse', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/aa1b96178ba14b57be1802052f40538ea6aba4275dd6f65cf5530043b695e257.png', link: 'https://nft.io/asset/3363-149870456524749265518454473437248225507' },
   
   { name: 'Imperial Sovereign', collection: 'The Etherscape', type: 'Memberships', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/cc624a9397569e36883d97c5f19a638b4e490f63dd0bddb65b9332111ec16b28.png', link: 'https://nft.io/asset/2100-1' },
@@ -35,7 +36,7 @@ const tokens = [
   { name: 'Pyjama Clan Warrior', collection: '#MyFirstNFT', type: 'Avatars', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/89fa4b8a7931400dbe8d1d9d6f4266400d359c581d85cec6e395de5840b35280.gif', link: 'https://nft.io/asset/3044-160504280491028834652094385504775045145' },
   { name: 'Pyjama Clan Apprentice', collection: '#MyFirstNFT', type: 'Avatars', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/c6c1cef2e5e62a4cf3a8484da1678123d376caa6a56d43231868acb1a0670543.gif', link: 'https://nft.io/asset/3044-160504280491028834633647641431065493919' },
   
-  { name: 'Grumpy Generation', collection: 'Grumpy Generation', type: 'Avatars', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/195e7ba8099c229bfb9e517289bd5a4493c0fb3c02823127a624a2a65427405c.png', link: 'https://nft.io/collection/grumpy-generation' },
+  { name: 'Grumpy Generation', collection: 'Grumpy Generation', type: 'Avatars', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/cac11e6bd4af6e390756285de2c921bd73404c69c54805d07c8e5bfc2e35a610.png', link: 'https://nft.io/collection/grumpy-generation' },
   { name: 'Enjels', collection: 'Enjels', type: 'Avatars', imageUrl: 'https://nft.production.enjinusercontent.com/uploads/images/cmozhphqcqbx3yns.png', link: 'https://nft.io/collection/enjels' },
 ];
 
