@@ -1,4 +1,4 @@
-# Final Year Project (FYP) 2024 @ Nottingham Trent University
+# Final Year Project @ Nottingham Trent University
 
 <div align="center">
     <img src="frontend/src/assets/images/ntu-logo-big.webp" alt="Nottingham Trent University Logo" width="250">
@@ -6,7 +6,7 @@
 
 ---
 
-Final Year Project (FYP) for the Computer Science academic year 2024 at [Nottingham Trent University](https://ntu.ac.uk).
+Final Year Project (FYP) for the Computer Science 2024 academic year at [Nottingham Trent University](https://ntu.ac.uk) (NTU).
 
 ## Requirements
 
