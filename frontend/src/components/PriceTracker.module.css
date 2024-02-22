@@ -1,0 +1,16 @@
+.ticker {
+    font-size: var(--fs-300);
+    color: hsl(var(--text2));
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    height: 25px;
+    margin-right: 5px;
+}
+
+.value {
+    color: #fff;
+    margin-left: 5px;
+}

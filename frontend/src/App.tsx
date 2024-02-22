@@ -1,4 +1,5 @@
 import './App.css';
+import PriceTracker from './components/PriceTracker';
 import Nav from './components/Nav';
 import Footer from './components/Footer'
 import Card from './components/Card';
@@ -43,7 +44,10 @@ const tokens = [
 function App() {
   return (
     <section className="App">
-      <h1>Explore NFTs</h1>
+      <header>
+        <h1>Explore NFTs</h1>
+        <PriceTracker />
+      </header>
       <Nav />
       <section className="cardContainer">
         {tokens.map((token, index) => (
