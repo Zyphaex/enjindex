@@ -30,12 +30,14 @@ const PriceTracker = () => {
     }, []);
 
     return (
-        <div className={styles.ticker}>
-            <img src={enj} alt="ENJ" className={styles.icon} />ENJ
-            {price !== null 
-                ? <span className={styles.value}>${price.toFixed(2)}</span>
-                : <span className={styles.value}>$?.??</span>}
-        </div>
+        <a href="https://coinmarketcap.com/currencies/enjin-coin/" target="_blank" rel="noopener noreferrer" aria-label="CoinMarketCap">
+            <div className={styles.ticker}>
+                <img src={enj} alt="Enjin Coin" className={styles.icon} />ENJ
+                {price !== null 
+                    ? <span className={styles.value}>${price.toFixed(2)}</span>
+                    : <span className={styles.value}>$?.??</span>}
+            </div>
+        </a>
     );    
 };
 

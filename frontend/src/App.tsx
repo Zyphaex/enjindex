@@ -46,7 +46,9 @@ function App() {
     <section className="App">
       <header>
         <h1>Explore NFTs</h1>
-        <PriceTracker />
+        <a href="https://coinmarketcap.com/currencies/enjin-coin/" target="_blank">
+          <PriceTracker />
+        </a>
       </header>
       <Nav />
       <section className="cardContainer">
