@@ -7,7 +7,7 @@ const navLinks = [
   { name: 'Metaverse', href: '#metaverse' },
   { name: 'Art', href: '#art' },
   { name: 'Memberships', href: '#memberships' },
-  { name: 'Historic', href: '#historic' },
+  { name: 'Commemorative', href: '#commemorative' },
 ];
 
 const Nav = ({ links = navLinks }) => {
