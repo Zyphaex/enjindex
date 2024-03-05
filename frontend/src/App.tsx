@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import PriceTracker from './components/PriceTracker';
 import Nav from './components/Nav';
 import Footer from './components/Footer'
@@ -42,24 +43,38 @@ const tokens = [
 ];
 
 function App() {
+  const [currentFilter, setCurrentFilter] = useState('All');
+
+  const handleFilterChange = (filterName: string) => {
+    setCurrentFilter(filterName);
+  };  
+  
+  const Tokens = currentFilter === 'All'
+    ? tokens
+    : tokens.filter(token => token.type === currentFilter);
+
   return (
     <section className="App">
       <header>
         <h1>Explore NFTs</h1>
         <PriceTracker />
       </header>
-      <Nav />
+      <Nav onNavLinkClick={handleFilterChange} />
       <section className="cardContainer">
-        {tokens.map((token, index) => (
-          <Card 
+      {Tokens.length > 0 ? (
+        Tokens.map((token, index) => (
+          <Card
             key={index}
-            name={token.name} 
-            collection={token.collection} 
-            type={token.type} 
-            imageUrl={token.imageUrl} 
-            link={token.link} 
+            name={token.name}
+            collection={token.collection}
+            type={token.type}
+            imageUrl={token.imageUrl}
+            link={token.link}
           />
-        ))}
+        ))
+      ) : (
+        <p>Unable to find any tokens.</p>
+      )}
       </section>
       <Footer />
     </section>

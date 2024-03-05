@@ -24,6 +24,11 @@ nav {
     padding: 20px;
 }
 
+.navHome {
+    vertical-align: middle;
+    font-size: 20px;
+}
+
 /* Search Bar */
 .searchContainer {
     display: flex;
@@ -77,8 +82,9 @@ nav {
 }
 
 .searchButton svg {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
 }
 
 .mobileSearch {

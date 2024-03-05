@@ -1,8 +1,14 @@
 import { useState } from 'react';
-import { FiSearch } from 'react-icons/fi';
+import { FaHome, FaSearch } from 'react-icons/fa';
 import styles from './Nav.module.css';
 
+interface NavProps {
+  links?: { name: string; href: string }[];
+  onNavLinkClick: (filterName: string) => void;
+}
+
 const navLinks = [
+  { name: 'All', href: '#' },
   { name: 'Avatars', href: '#avatars' },
   { name: 'Metaverse', href: '#metaverse' },
   { name: 'Art', href: '#art' },
@@ -10,11 +16,16 @@ const navLinks = [
   { name: 'Commemorative', href: '#commemorative' },
 ];
 
-const Nav = ({ links = navLinks }) => {
+const Nav = ({ links = navLinks, onNavLinkClick }: NavProps) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
-
+  
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible);
+  };
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, name: string) => {
+    e.preventDefault();
+    onNavLinkClick(name);
   };
 
   return (
@@ -28,7 +39,7 @@ const Nav = ({ links = navLinks }) => {
         <div className={styles.searchContainer}>
           <input type="text" className={styles.searchInput} placeholder="Search" />
           <button className={styles.searchButton}>
-            <FiSearch />
+            <FaSearch />
         </button>
         </div>
       </div>
@@ -39,15 +50,17 @@ const Nav = ({ links = navLinks }) => {
       </div>
       <ul className={`${styles.navLinks} ${isNavVisible ? styles.showNav : ''}`}>
         {links.map((link, index) => (
-          <li key={index}>
-            <a href={link.href}>{link.name}</a>
+          <li key={index}  className="navLink">
+            <a href={link.href} onClick={(e) => handleLinkClick(e, link.name)}>
+              {link.name === 'All' ? <FaHome className={styles.navHome} /> : link.name}
+            </a>
           </li>
         ))}
       </ul>
       <div className={styles.searchContainer}>
         <input type="text" className={styles.searchInput} placeholder="Search" />
         <button className={styles.searchButton}>
-          <FiSearch />
+          <FaSearch />
         </button>
       </div>
     </nav>
