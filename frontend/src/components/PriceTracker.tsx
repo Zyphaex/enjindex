@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './PriceTracker.module.css';
-import enj from '../assets/images/enj.webp';
+import enj from '../assets/images/enjin-logo.webp';
 
 
 const PriceTracker = () => {
