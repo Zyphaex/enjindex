@@ -49,8 +49,8 @@ const Nav = ({ links = navLinks, onNavLinkClick }: NavProps) => {
         <span></span>
       </div>
       <ul className={`${styles.navLinks} ${isNavVisible ? styles.showNav : ''}`}>
-        {links.map((link, index) => (
-          <li key={index}  className="navLink">
+        {links.map((link) => (
+          <li key={link.name}  className="navLink">
             <a href={link.href} onClick={(e) => handleLinkClick(e, link.name)}>
               {link.name === 'All' ? <FaHome className={styles.navHome} /> : link.name}
             </a>
