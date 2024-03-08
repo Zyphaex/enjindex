@@ -2,8 +2,8 @@ import { useState } from 'react';
 import styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXTwitter, faLinkedin, faGithub, faYoutube, faDiscord } from '@fortawesome/free-brands-svg-icons';
-import ntuLogo from '../assets/images/ntu-logo-big.webp';
-import ntuLogoHover from '../assets/images/ntu-logo-big-hover.webp';
+import ntuLogoTitle from '../assets/images/ntuLogoTitle.webp';
+import ntuLogoTitleHover from '../assets/images/ntuLogoTitleHover.webp';
 
 const Footer = () => {
   // Social Media Links
@@ -63,10 +63,11 @@ const Footer = () => {
           className={styles.footerLogo}
           href="https://github.com/Zyphaex/fyp2024"
           target="_blank"
+          rel="noopener noreferrer"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <img src={isHovered ? ntuLogoHover : ntuLogo} alt="Nottingham Trent University" />
+          <img src={isHovered ? ntuLogoTitleHover : ntuLogoTitle} alt="Nottingham Trent University" />
         </a>
         {renderFooterLinks()}
       </section>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaHome, FaSearch } from 'react-icons/fa';
 import styles from './Nav.module.css';
 
@@ -18,7 +18,8 @@ const navLinks = [
 
 const Nav = ({ links = navLinks, onNavLinkClick }: NavProps) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
-  
+  const navRef = useRef<HTMLDivElement>(null);
+
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible);
   };
@@ -28,8 +29,21 @@ const Nav = ({ links = navLinks, onNavLinkClick }: NavProps) => {
     onNavLinkClick(name);
   };
 
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsNavVisible(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [navRef]);
+
   return (
-    <nav>
+    <nav ref={navRef}>
       <div className={styles.mobileSearch}>
         <div className={styles.hamburger} onClick={toggleNav}>
           <span></span>
@@ -40,7 +54,7 @@ const Nav = ({ links = navLinks, onNavLinkClick }: NavProps) => {
           <input type="text" className={styles.searchInput} placeholder="Search" />
           <button className={styles.searchButton}>
             <FaSearch />
-        </button>
+          </button>
         </div>
       </div>
       <div className={styles.hamburger} onClick={toggleNav}>
@@ -50,7 +64,7 @@ const Nav = ({ links = navLinks, onNavLinkClick }: NavProps) => {
       </div>
       <ul className={`${styles.navLinks} ${isNavVisible ? styles.showNav : ''}`}>
         {links.map((link) => (
-          <li key={link.name}  className="navLink">
+          <li key={link.name} className="navLink">
             <a href={link.href} onClick={(e) => handleLinkClick(e, link.name)}>
               {link.name === 'All' ? <FaHome className={styles.navHome} /> : link.name}
             </a>

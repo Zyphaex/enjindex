@@ -1,7 +1,7 @@
 # Final Year Project 2024 @ Nottingham Trent University
 
 <div align="center">
-    <img src="frontend/src/assets/images/ntu-logo-big.webp" alt="Nottingham Trent University Logo" width="250">
+    <img src="frontend/src/assets/images/ntuLogoTitle.webp" alt="Nottingham Trent University Logo" width="250">
 </div>
 
 ---

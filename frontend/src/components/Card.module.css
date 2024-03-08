@@ -11,12 +11,14 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    transition: transform 0.5s ease, background-color 0.1s ease;
+    transition: transform 0.5s ease, background-color 0.1s ease, box-shadow 0.1s ease;
 }
 
 .card:hover {
     background-image: radial-gradient(circle at center, #4F6267 0%, #383c3f 100%);
-    transform: scale(1.03);
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px hsl(var(--text2));
 }
 
 .card:active {

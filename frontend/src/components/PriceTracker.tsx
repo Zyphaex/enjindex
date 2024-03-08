@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './PriceTracker.module.css';
-import enj from '../assets/images/enjin-logo.webp';
-
+import enjinLogo from '../assets/images/enjinLogo.webp';
 
 const PriceTracker = () => {
     const [price, setPrice] = useState<number | null>(null);
@@ -32,7 +31,7 @@ const PriceTracker = () => {
     return (
         <a href="https://coinmarketcap.com/currencies/enjin-coin/" target="_blank" rel="noopener noreferrer" aria-label="CoinMarketCap">
             <div className={styles.ticker}>
-                <img src={enj} alt="Enjin Coin" className={styles.icon} />ENJ
+                <img src={enjinLogo} alt="Enjin Coin" className={styles.icon} />ENJ
                 {price !== null 
                     ? <span className={styles.value}>${price.toFixed(2)}</span>
                     : <span className={styles.value}>$?.??</span>}
