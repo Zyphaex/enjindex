@@ -15,7 +15,7 @@ function Card({ name, collection, type, imageUrl, link }: Card) {
         <h3>{name}</h3>
         <h4>{collection}</h4>
         <p>{type}</p>
-        <img src={imageUrl} alt={name} />
+        <img src={imageUrl} alt={name} loading="lazy" />
       </div>
     </a>
   );
