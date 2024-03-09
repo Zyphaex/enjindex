@@ -17,17 +17,28 @@ interface Token {
 
 const App = () => {
   const [currentFilter, setCurrentFilter] = useState<string>('All');
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedToken, setSelectedToken] = useState<Token | null>(null);
 
   const handleFilterChange = (filterName: string) => {
     setCurrentFilter(filterName);
   };
 
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query);
+  };
+
   const filteredTokens = useMemo(() => {
-    return currentFilter === 'All'
-      ? tokens
-      : tokens.filter((token: Token) => token.type === currentFilter);
-  }, [currentFilter, tokens]);
+    let result = tokens.filter((token: Token) => {
+      return currentFilter === 'All' || token.type === currentFilter;
+    });
+    if (searchQuery) {
+      result = result.filter((token: Token) =>
+        token.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+    return result;
+  }, [currentFilter, tokens, searchQuery]);
 
   const openModal = (token: Token) => {
     setSelectedToken(token);
@@ -43,7 +54,7 @@ const App = () => {
         <h1>Explore Tokens</h1>
         <PriceTracker />
       </header>
-      <Nav onNavLinkClick={handleFilterChange} />
+      <Nav onNavLinkClick={handleFilterChange} onSearchChange={handleSearchChange} />
       <section className="cardContainer">
         {filteredTokens.length > 0 ? (
           filteredTokens.map((token: Token) => (

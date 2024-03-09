@@ -5,6 +5,7 @@ import styles from './Nav.module.css';
 interface NavProps {
   links?: { name: string; href: string }[];
   onNavLinkClick: (filterName: string) => void;
+  onSearchChange: (searchQuery: string) => void;
 }
 
 const navLinks = [
@@ -16,7 +17,7 @@ const navLinks = [
   { name: 'Commemorative', href: '#commemorative' },
 ];
 
-const Nav = ({ links = navLinks, onNavLinkClick }: NavProps) => {
+const Nav = ({ links = navLinks, onNavLinkClick, onSearchChange }: NavProps) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -42,6 +43,10 @@ const Nav = ({ links = navLinks, onNavLinkClick }: NavProps) => {
     };
   }, [navRef]);
 
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onSearchChange(e.target.value);
+  };
+
   return (
     <nav ref={navRef}>
       <div className={styles.mobileSearch}>
@@ -51,7 +56,7 @@ const Nav = ({ links = navLinks, onNavLinkClick }: NavProps) => {
           <span></span>
         </div>
         <div className={styles.searchContainer}>
-          <input type="text" className={styles.searchInput} placeholder="Search" />
+          <input type="text" className={styles.searchInput} placeholder="Search" onChange={handleSearchChange} />
           <button className={styles.searchButton}>
             <FaSearch />
           </button>
@@ -72,7 +77,7 @@ const Nav = ({ links = navLinks, onNavLinkClick }: NavProps) => {
         ))}
       </ul>
       <div className={styles.searchContainer}>
-        <input type="text" className={styles.searchInput} placeholder="Search" />
+        <input type="text" className={styles.searchInput} placeholder="Search" onChange={handleSearchChange} />
         <button className={styles.searchButton}>
           <FaSearch />
         </button>
