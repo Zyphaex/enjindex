@@ -34,7 +34,8 @@ const App = () => {
     });
     if (searchQuery) {
       result = result.filter((token: Token) =>
-        token.name.toLowerCase().includes(searchQuery.toLowerCase())
+        token.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        token.collection.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
     return result;
