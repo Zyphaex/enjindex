@@ -6,11 +6,13 @@
 
 ---
 
+ENJindex, a trusted token explorer.
+
 Final Year Project (FYP) for the Computer Science 2024 academic year at [Nottingham Trent University](https://ntu.ac.uk) (NTU).
 
 ## Requirements
 
-Make sure you have Node and NPM installed::
+Make sure you have Node and NPM installed:
 
 ```bash
 node -v

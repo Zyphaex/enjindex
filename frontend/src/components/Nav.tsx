@@ -19,6 +19,7 @@ const navLinks = [
 
 const Nav = ({ links = navLinks, onNavLinkClick, onSearchChange }: NavProps) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const navRef = useRef<HTMLDivElement>(null);
 
   const toggleNav = () => {
@@ -28,6 +29,10 @@ const Nav = ({ links = navLinks, onNavLinkClick, onSearchChange }: NavProps) => 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, name: string) => {
     e.preventDefault();
     onNavLinkClick(name);
+    if (name === 'All') {
+      setSearchQuery('');
+      onSearchChange('');
+    }
   };
 
   useEffect(() => {
@@ -44,6 +49,7 @@ const Nav = ({ links = navLinks, onNavLinkClick, onSearchChange }: NavProps) => 
   }, [navRef]);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
     onSearchChange(e.target.value);
   };
 
@@ -77,7 +83,7 @@ const Nav = ({ links = navLinks, onNavLinkClick, onSearchChange }: NavProps) => 
         ))}
       </ul>
       <div className={styles.searchContainer}>
-        <input type="text" className={styles.searchInput} placeholder="Search" onChange={handleSearchChange} />
+        <input type="text" value={searchQuery} className={styles.searchInput} placeholder="Search" onChange={handleSearchChange} />
         <button className={styles.searchButton}>
           <FaSearch />
         </button>
