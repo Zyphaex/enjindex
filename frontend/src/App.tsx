@@ -40,7 +40,7 @@ const App = () => {
   return (
     <section className="App">
       <header>
-        <h1>Explore NFTs</h1>
+        <h1>Explore Tokens</h1>
         <PriceTracker />
       </header>
       <Nav onNavLinkClick={handleFilterChange} />
