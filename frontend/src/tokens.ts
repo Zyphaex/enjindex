@@ -29,7 +29,7 @@ const tokens = [
   { name: 'Emi the Fearless Woman', collection: 'Emi the Fearless Woman', type: 'Commemorative', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/59bda0bee24c43b092b9ee6e19622a22822db74e9f70c8253dbf00ddc37d37b4.png', link: 'https://nft.io/collection/emi-the-fearless-woman' },
 
   { name: 'Priceless Binance Hoodie', collection: 'Binance', type: 'Metaverse', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/67d254c8ee72edcb151789f7fc44dfa718c637fa5fbcebf5da444bd7e5bc4525.png', link: 'https://nft.io/asset/3363-149870456524749265407774008994990915585' },
-  { name: 'Exclusive Binance Hoodie', collection: 'Binance', type: 'Metaverse', imageUrl: 'https://cdn.enjinx.io/metadata/raw/37cc6eb9e2174243e125786b97aa1787f187639b/01ac96107b8e5a3477034161fbdefddb4fb28286.png', link: '#' },
+  { name: 'Exclusive Binance Hoodie', collection: 'Binance', type: 'Metaverse', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/051b12ebcc25652a6027cbef0fb8e832b9c8b202887c39f6c3c4acb4153099e6.png', link: 'https://nft.io/asset/3363-149870456524749265426220753068700467201' },
   { name: 'Iconic Binance Hoodie', collection: 'Binance', type: 'Metaverse', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/aa1b96178ba14b57be1802052f40538ea6aba4275dd6f65cf5530043b695e257.png', link: 'https://nft.io/asset/3363-149870456524749265518454473437248225507' },
 
   { name: 'Goblin Cart', collection: 'ENJ Excavators', type: 'Metaverse', imageUrl: 'https://nft.production.enjinusercontent.com/uploads/files/zoofqmufcxkgqhxw.jpg', link: 'https://nft.io/asset/3892-1' },
