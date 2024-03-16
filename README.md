@@ -38,17 +38,17 @@ npm run dev
 
 ## Security Vulnerabilities
 
-Please review our [security policy](https://github.com/Zyphaex/fyp2024/security/policy) on how to report security vulnerabilities.
+Please review our [security policy](https://github.com/Zyphaex/enjindex/security/policy) on how to report security vulnerabilities.
 
 ## Credits
 
 - [Samuel Hillier](https://github.com/Zyphaex)
-- [All Contributors](https://github.com/Zyphaex/fyp2024/contributors)
+- [All Contributors](https://github.com/Zyphaex/enjindex/contributors)
 
 *External contributions will only be reviewed post-university submission.*
 
 ## License
 
-Please see [License File](https://github.com/Zyphaex/fyp2024/blob/main/LICENSE) for more information.
+Please see [License File](https://github.com/Zyphaex/enjindex/blob/main/LICENSE) for more information.
 
 © 2024 Samuel Hillier. All Rights Reserved.
