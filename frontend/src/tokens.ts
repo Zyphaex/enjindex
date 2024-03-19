@@ -40,7 +40,6 @@ const tokens = [
 
   { name: 'Grumpy Generation', collection: 'Grumpy Generation', type: 'Avatars', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/cac11e6bd4af6e390756285de2c921bd73404c69c54805d07c8e5bfc2e35a610.png', link: 'https://nft.io/collection/grumpy-generation' },
   { name: 'Enjels', collection: 'Enjels', type: 'Avatars', imageUrl: 'https://nft.production.enjinusercontent.com/uploads/images/cmozhphqcqbx3yns.png', link: 'https://nft.io/collection/enjels' },
-  { name: 'ENJindex Token', collection: 'ENJindex', type: 'Memberships', imageUrl: 'https://nft.production.enjinusercontent.com/uploads/files/z74rgp2bwtzepjjw.jpg', link: 'https://nft.io/asset/3913-1' },
 ];
 
 export default tokens;
