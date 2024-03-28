@@ -9,6 +9,7 @@ import TokenModal from './components/TokenModal';
 
 interface Token {
   name: string;
+  id: string;
   collection: string;
   type: string;
   imageUrl: string;
@@ -62,6 +63,7 @@ const App = () => {
             <div key={token.name}>
               <Card
                 name={token.name}
+                id={token.id}
                 collection={token.collection}
                 type={token.type}
                 imageUrl={token.imageUrl}

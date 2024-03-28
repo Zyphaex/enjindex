@@ -2,6 +2,7 @@ import styles from './Card.module.css';
 
 interface CardProps {
   name: string;
+  id: string;
   collection: string;
   type: string;
   imageUrl: string;
