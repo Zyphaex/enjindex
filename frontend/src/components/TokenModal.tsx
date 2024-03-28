@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import styles from './TokenModal.module.css';
 import nftioLogo from '../assets/images/nftioLogo.webp';
 import nftioLogoHover from '../assets/images/nftioLogoHover.webp';
@@ -8,6 +10,7 @@ interface TokenModalProps {
   onClose: () => void;
   token: {
     name: string;
+    id: string;
     collection: string;
     type: string;
     imageUrl: string;
@@ -18,6 +21,16 @@ interface TokenModalProps {
 const TokenModal: React.FC<TokenModalProps> = ({ isOpen, onClose, token }) => {
   const [isHovered, setIsHovered] = useState(false);
   
+  const handleCopyToClipboard = () => {
+    navigator.clipboard.writeText(token.id)
+      .then(() => {
+        alert('Token ID copied to clipboard!');
+      })
+      .catch(err => {
+        console.error('Error copying ID to clipboard', err);
+      });
+  };
+
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       const target = event.target as Element;
@@ -46,6 +59,12 @@ const TokenModal: React.FC<TokenModalProps> = ({ isOpen, onClose, token }) => {
         <p>{token.type}</p>
         <img src={token.imageUrl} alt={token.name} />
         <div className={styles.nftioContainer}>
+          <div className={styles.tokenIdImportContainer}>
+            <span>{token.id}</span>
+            <button onClick={handleCopyToClipboard}>
+              <FontAwesomeIcon icon={faCopy} />
+            </button>
+          </div>
           <a
             className={styles.viewOnLink}
             href={token.link}

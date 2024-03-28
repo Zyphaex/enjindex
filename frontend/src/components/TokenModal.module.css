@@ -57,9 +57,32 @@
 
 .modalContent .nftioContainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+}
+
+.modalContent .tokenIdImportContainer {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.modalContent .tokenIdImportContainer span {
+  background-color: #616161;
+  padding: 5px 10px;
+  border-radius: 5px;
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modalContent .tokenIdImportContainer button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-image: radial-gradient(circle at center, #7569B5 0%, #8376D8 50%, #6258A4 100%);
+  cursor: pointer;
 }
 
 .modalContent .viewOnLink {
