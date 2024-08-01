@@ -1,4 +1,4 @@
-# Final Year Project 2024 @ Nottingham Trent University
+# ENJindex, explore NFTs and crypto collectibles.
 
 <div align="center">
     <img src="frontend/src/assets/images/ntuLogoTitle.webp" alt="Nottingham Trent University Logo" width="250">
@@ -6,6 +6,7 @@
 
 ---
 
+ENJindex, explore NFTs and crypto collectibles. 
 Final Year Project (FYP) for the Computer Science 2024 academic year at [Nottingham Trent University](https://ntu.ac.uk) (NTU).
 
 ## Requirements
@@ -42,8 +43,6 @@ Please review our [security policy](https://github.com/Zyphaex/enjindex/security
 
 - [Samuel Hillier](https://github.com/Zyphaex)
 - [All Contributors](https://github.com/Zyphaex/enjindex/contributors)
-
-*External contributions will only be reviewed post-university submission.*
 
 ## License
 
