@@ -1,26 +1,40 @@
-import { useState } from 'react';
-import styles from './Footer.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXTwitter, faLinkedin, faGithub, faYoutube, faDiscord } from '@fortawesome/free-brands-svg-icons';
-import ntuLogoTitle from '../assets/images/ntuLogoTitle.webp';
-import ntuLogoTitleHover from '../assets/images/ntuLogoTitleHover.webp';
+import { useState } from "react";
+import styles from "./Footer.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faXTwitter,
+  faLinkedin,
+  faGithub,
+  faYoutube,
+  faDiscord,
+} from "@fortawesome/free-brands-svg-icons";
+import ntuLogoTitle from "../assets/images/ntuLogoTitle.webp";
+import ntuLogoTitleHover from "../assets/images/ntuLogoTitleHover.webp";
 
 const Footer = () => {
   // Social Media Links
   const socialMediaLinks = [
-    { name: 'Twitter', url: 'https://x.com/Zyphaex', icon: faXTwitter },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/samhillier/', icon: faLinkedin },
-    { name: 'GitHub', url: 'https://github.com/Zyphaex', icon: faGithub },
-    { name: 'YouTube', url: 'https://youtube.com/@Zyphaex', icon: faYoutube },
-    { name: 'Discord', url: 'https://discord.com/invite/XfZHVfPr9C', icon: faDiscord },
+    { name: "Twitter", url: "https://x.com/Zyphaex", icon: faXTwitter },
+    {
+      name: "LinkedIn",
+      url: "https://linkedin.com/in/samhillier/",
+      icon: faLinkedin,
+    },
+    { name: "GitHub", url: "https://github.com/Zyphaex", icon: faGithub },
+    { name: "YouTube", url: "https://youtube.com/@Zyphaex", icon: faYoutube },
+    {
+      name: "Discord",
+      url: "https://discord.com/invite/XfZHVfPr9C",
+      icon: faDiscord,
+    },
   ];
 
   // Footer Links
   const footerLinks = [
-    { name: 'About', href: 'about' },
-    { name: 'Contact', href: 'contact' },
-    { name: 'Terms & Conditions', href: 'terms' },
-    { name: 'Privacy Policy', href: 'privacy' },
+    { name: "About", href: "about" },
+    { name: "Contact", href: "contact" },
+    { name: "Terms & Conditions", href: "terms" },
+    { name: "Privacy Policy", href: "privacy" },
   ];
 
   const [isHovered, setIsHovered] = useState(false);
@@ -67,13 +81,18 @@ const Footer = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <img src={isHovered ? ntuLogoTitleHover : ntuLogoTitle} alt="Nottingham Trent University" />
+          <img
+            src={isHovered ? ntuLogoTitleHover : ntuLogoTitle}
+            alt="Nottingham Trent University"
+          />
         </a>
         {renderFooterLinks()}
       </section>
       <section className={styles.footerContainer}>
         {renderSocialMediaLinks()}
-        <p className={styles.footerLegal}>&copy; {new Date().getFullYear()} Sam Hillier. All Rights Reserved.</p>
+        <p className={styles.footerLegal}>
+          &copy; {new Date().getFullYear()} Sam Hillier. All Rights Reserved.
+        </p>
       </section>
     </footer>
   );

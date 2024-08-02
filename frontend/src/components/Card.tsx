@@ -1,4 +1,4 @@
-import styles from './Card.module.css';
+import styles from "./Card.module.css";
 
 interface CardProps {
   name: string;
@@ -10,7 +10,14 @@ interface CardProps {
   onCardClick: (token: any) => void;
 }
 
-function Card({ name, collection, type, imageUrl, link, onCardClick }: CardProps) {
+function Card({
+  name,
+  collection,
+  type,
+  imageUrl,
+  link,
+  onCardClick,
+}: CardProps) {
   const handleClick = () => {
     const token = { name, collection, type, imageUrl, link };
     onCardClick(token);

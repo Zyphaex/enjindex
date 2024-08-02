@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCopy } from '@fortawesome/free-solid-svg-icons';
-import styles from './TokenModal.module.css';
-import nftioLogo from '../assets/images/nftioLogo.webp';
-import nftioLogoHover from '../assets/images/nftioLogoHover.webp';
+import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import styles from "./TokenModal.module.css";
+import nftioLogo from "../assets/images/nftioLogo.webp";
+import nftioLogoHover from "../assets/images/nftioLogoHover.webp";
 
 interface TokenModalProps {
   isOpen: boolean;
@@ -20,14 +20,15 @@ interface TokenModalProps {
 
 const TokenModal: React.FC<TokenModalProps> = ({ isOpen, onClose, token }) => {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   const handleCopyToClipboard = () => {
-    navigator.clipboard.writeText(token.id)
+    navigator.clipboard
+      .writeText(token.id)
       .then(() => {
-        alert('Token ID copied to clipboard!');
+        alert("Token ID copied to clipboard!");
       })
-      .catch(err => {
-        console.error('Error copying ID to clipboard', err);
+      .catch((err) => {
+        console.error("Error copying ID to clipboard", err);
       });
   };
 
@@ -40,11 +41,11 @@ const TokenModal: React.FC<TokenModalProps> = ({ isOpen, onClose, token }) => {
     };
 
     if (isOpen) {
-      document.addEventListener('click', handleOutsideClick);
+      document.addEventListener("click", handleOutsideClick);
     }
 
     return () => {
-      document.removeEventListener('click', handleOutsideClick);
+      document.removeEventListener("click", handleOutsideClick);
     };
   }, [isOpen, onClose]);
 
@@ -74,10 +75,10 @@ const TokenModal: React.FC<TokenModalProps> = ({ isOpen, onClose, token }) => {
             onMouseLeave={() => setIsHovered(false)}
           >
             View on
-            <img 
-              src={isHovered ? nftioLogoHover : nftioLogo} 
-              alt="View on NFT.io" 
-              className={styles.nftioLogo} 
+            <img
+              src={isHovered ? nftioLogoHover : nftioLogo}
+              alt="View on NFT.io"
+              className={styles.nftioLogo}
             />
           </a>
         </div>

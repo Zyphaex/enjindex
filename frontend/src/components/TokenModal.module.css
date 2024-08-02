@@ -12,7 +12,7 @@
 }
 
 .modalContent {
-  background: radial-gradient(circle at center, #48555A 0%, #383D40 100%);
+  background: radial-gradient(circle at center, #48555a 0%, #383d40 100%);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -22,7 +22,8 @@
   box-shadow: 0 0 5px 2px hsl(var(--text2));
 }
 
-.modalContent h3, .modalContent h4 {
+.modalContent h3,
+.modalContent h4 {
   transition: color 0.1s ease;
 }
 
@@ -41,7 +42,12 @@
 .modalContent p {
   color: white;
   font-size: 16px;
-  background-image: radial-gradient(circle at center, #7569B5 0%, #8376D8 50%, #6258A4 100%);
+  background-image: radial-gradient(
+    circle at center,
+    #7569b5 0%,
+    #8376d8 50%,
+    #6258a4 100%
+  );
   border-radius: 50px;
   padding: 5px 0;
   margin-bottom: 10px;
@@ -81,7 +87,12 @@
 .modalContent .tokenIdImportContainer button {
   padding: 5px 10px;
   border-radius: 5px;
-  background-image: radial-gradient(circle at center, #7569B5 0%, #8376D8 50%, #6258A4 100%);
+  background-image: radial-gradient(
+    circle at center,
+    #7569b5 0%,
+    #8376d8 50%,
+    #6258a4 100%
+  );
   cursor: pointer;
 }
 
@@ -118,18 +129,18 @@
 /* Media Queries */
 @media (max-width: 768px) {
   .modalContent {
-      width: 300px;
+    width: 300px;
   }
 
   .modalContent h3 {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .modalContent h4 {
-      font-size: 14px;
+    font-size: 14px;
   }
-  
+
   .modalContent p {
-      font-size: 14px;
+    font-size: 14px;
   }
 }

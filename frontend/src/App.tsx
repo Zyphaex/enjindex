@@ -1,11 +1,11 @@
-import './App.css';
-import { useState, useMemo } from 'react';
-import PriceTracker from './components/PriceTracker';
-import Nav from './components/Nav';
-import Footer from './components/Footer';
-import Card from './components/Card';
-import tokens from './tokens';
-import TokenModal from './components/TokenModal';
+import "./App.css";
+import { useState, useMemo } from "react";
+import PriceTracker from "./components/PriceTracker";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import Card from "./components/Card";
+import tokens from "./tokens";
+import TokenModal from "./components/TokenModal";
 
 interface Token {
   name: string;
@@ -17,8 +17,8 @@ interface Token {
 }
 
 const App = () => {
-  const [currentFilter, setCurrentFilter] = useState<string>('All');
-  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [currentFilter, setCurrentFilter] = useState<string>("All");
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedToken, setSelectedToken] = useState<Token | null>(null);
 
   const handleFilterChange = (filterName: string) => {
@@ -31,12 +31,13 @@ const App = () => {
 
   const filteredTokens = useMemo(() => {
     let result = tokens.filter((token: Token) => {
-      return currentFilter === 'All' || token.type === currentFilter;
+      return currentFilter === "All" || token.type === currentFilter;
     });
     if (searchQuery) {
-      result = result.filter((token: Token) =>
-        token.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        token.collection.toLowerCase().includes(searchQuery.toLowerCase())
+      result = result.filter(
+        (token: Token) =>
+          token.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          token.collection.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
     return result;
@@ -56,7 +57,10 @@ const App = () => {
         <h1>Explore Tokens</h1>
         <PriceTracker />
       </header>
-      <Nav onNavLinkClick={handleFilterChange} onSearchChange={handleSearchChange} />
+      <Nav
+        onNavLinkClick={handleFilterChange}
+        onSearchChange={handleSearchChange}
+      />
       <section className="cardContainer">
         {filteredTokens.length > 0 ? (
           filteredTokens.map((token: Token) => (
@@ -77,7 +81,11 @@ const App = () => {
         )}
       </section>
       {selectedToken && (
-        <TokenModal isOpen={!!selectedToken} onClose={closeModal} token={selectedToken} />
+        <TokenModal
+          isOpen={!!selectedToken}
+          onClose={closeModal}
+          token={selectedToken}
+        />
       )}
       <Footer />
     </section>

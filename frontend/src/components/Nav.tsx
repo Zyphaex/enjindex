@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
-import { FaHome, FaSearch } from 'react-icons/fa';
-import styles from './Nav.module.css';
+import { useState, useEffect, useRef } from "react";
+import { FaHome, FaSearch } from "react-icons/fa";
+import styles from "./Nav.module.css";
 
 interface NavProps {
   links?: { name: string; href: string }[];
@@ -9,29 +9,36 @@ interface NavProps {
 }
 
 const navLinks = [
-  { name: 'All', href: '#' },
-  { name: 'Avatars', href: '#avatars' },
-  { name: 'Metaverse', href: '#metaverse' },
-  { name: 'Art', href: '#art' },
-  { name: 'Memberships', href: '#memberships' },
-  { name: 'Commemorative', href: '#commemorative' },
+  { name: "All", href: "#" },
+  { name: "Avatars", href: "#avatars" },
+  { name: "Metaverse", href: "#metaverse" },
+  { name: "Art", href: "#art" },
+  { name: "Memberships", href: "#memberships" },
+  { name: "Commemorative", href: "#commemorative" },
 ];
 
-const Nav = ({ links = navLinks, onNavLinkClick, onSearchChange }: NavProps) => {
+const Nav = ({
+  links = navLinks,
+  onNavLinkClick,
+  onSearchChange,
+}: NavProps) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const navRef = useRef<HTMLDivElement>(null);
 
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible);
   };
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, name: string) => {
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    name: string
+  ) => {
     e.preventDefault();
     onNavLinkClick(name);
-    if (name === 'All') {
-      setSearchQuery('');
-      onSearchChange('');
+    if (name === "All") {
+      setSearchQuery("");
+      onSearchChange("");
     }
   };
 
@@ -42,9 +49,9 @@ const Nav = ({ links = navLinks, onNavLinkClick, onSearchChange }: NavProps) => 
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [navRef]);
 
@@ -62,7 +69,12 @@ const Nav = ({ links = navLinks, onNavLinkClick, onSearchChange }: NavProps) => 
           <span></span>
         </div>
         <div className={styles.searchContainer}>
-          <input type="text" className={styles.searchInput} placeholder="Search" onChange={handleSearchChange} />
+          <input
+            type="text"
+            className={styles.searchInput}
+            placeholder="Search"
+            onChange={handleSearchChange}
+          />
           <button className={styles.searchButton}>
             <FaSearch />
           </button>
@@ -73,23 +85,35 @@ const Nav = ({ links = navLinks, onNavLinkClick, onSearchChange }: NavProps) => 
         <span></span>
         <span></span>
       </div>
-      <ul className={`${styles.navLinks} ${isNavVisible ? styles.showNav : ''}`}>
+      <ul
+        className={`${styles.navLinks} ${isNavVisible ? styles.showNav : ""}`}
+      >
         {links.map((link) => (
           <li key={link.name} className="navLink">
             <a href={link.href} onClick={(e) => handleLinkClick(e, link.name)}>
-              {link.name === 'All' ? <FaHome className={styles.navHome} /> : link.name}
+              {link.name === "All" ? (
+                <FaHome className={styles.navHome} />
+              ) : (
+                link.name
+              )}
             </a>
           </li>
         ))}
       </ul>
       <div className={styles.searchContainer}>
-        <input type="text" value={searchQuery} className={styles.searchInput} placeholder="Search" onChange={handleSearchChange} />
+        <input
+          type="text"
+          value={searchQuery}
+          className={styles.searchInput}
+          placeholder="Search"
+          onChange={handleSearchChange}
+        />
         <button className={styles.searchButton}>
           <FaSearch />
         </button>
       </div>
     </nav>
   );
-}
+};
 
 export default Nav;

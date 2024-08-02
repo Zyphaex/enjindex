@@ -1,4 +1,4 @@
-# ENJindex, explore NFTs and crypto collectibles.
+# ENJindex, explore NFTs and crypto collectibles
 
 <div align="center">
     <img src="frontend/src/assets/images/ntuLogoTitle.webp" alt="Nottingham Trent University Logo" width="250">
