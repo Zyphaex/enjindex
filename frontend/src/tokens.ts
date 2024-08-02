@@ -35,11 +35,6 @@ const tokens = [
   { name: 'Goblin Cart', id: '3892-1', collection: 'ENJ Excavators', type: 'Metaverse', imageUrl: 'https://nft.production.enjinusercontent.com/uploads/files/zoofqmufcxkgqhxw.jpg', link: 'https://nft.io/asset/3892-1' },
   { name: 'Goblin Drill', id: '3892-2', collection: 'ENJ Excavators', type: 'Metaverse', imageUrl: 'https://nft.production.enjinusercontent.com/uploads/files/dmjpdsoxpmqj0wrb.jpg', link: 'https://nft.io/asset/3892-2' },
   { name: 'Goblin Drill Squad', id: '3892-3', collection: 'ENJ Excavators', type: 'Metaverse', imageUrl: 'https://nft.production.enjinusercontent.com/uploads/files/urkldvd7oygqvdz4.jpg', link: 'https://nft.io/asset/3892-3' },
-
-  { name: 'Barbarian 🐻', id: '2836-4', collection: 'The Bad Bears Collection', type: 'Metaverse', imageUrl: 'https://nft.production.enjinusercontent.com/uploads/files/hntqcito44ztoens.jpg', link: 'https://nft.io/asset/2836-4' },
-
-  { name: 'Grumpy Generation', id: '2402', collection: 'Grumpy Generation', type: 'Avatars', imageUrl: 'https://nft.production.enjinusercontent.com/metadata/enjin/media/cac11e6bd4af6e390756285de2c921bd73404c69c54805d07c8e5bfc2e35a610.png', link: 'https://nft.io/collection/grumpy-generation' },
-  { name: 'Enjels', id: '2239', collection: 'Enjels', type: 'Avatars', imageUrl: 'https://nft.production.enjinusercontent.com/uploads/images/cmozhphqcqbx3yns.png', link: 'https://nft.io/collection/enjels' },
 ];
 
 export default tokens;
